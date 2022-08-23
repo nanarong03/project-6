@@ -12,6 +12,8 @@
         </div>
         <div class="col-lg-8 text-center text-lg-right">
           <ul class="list-inline">
+
+
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#loginModal">เข้าสู่ระบบ</a></li>
             <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#signupModal">สมัครสมาชิค</a></li>
           </ul>

@@ -1,14 +1,14 @@
 <div class="container-scroller">
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
-          <a class="sidebar-brand brand-logo" href="index.php"><img src="assets/images/logo.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="index.php"><img src="{{ asset('template/admin/assets/images/logo.svg') }} " alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="index.php"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item nav-profile">
-            <a href="#" class="nav-link">
+            <a href="index.php" class="nav-link">
               <div class="nav-profile-image">
-                <img src="assets/images/faces/face1.jpg" alt="profile" />
+                <img src="{{ asset('template/admin/assets/images/faces/face1.jpg') }}" alt="profile" />
                 <span class="login-status online"></span>
                 <!-- change to offline or busy as needed -->
               </div>
@@ -129,7 +129,7 @@
 
       <nav class="navbar col-lg-12 col-12 p-lg-0 fixed-top d-flex flex-row">
           <div class="navbar-menu-wrapper d-flex align-items-stretch justify-content-between">
-            <a class="navbar-brand brand-logo-mini align-self-center d-lg-none" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini align-self-center d-lg-none" href="index.html"><img src="{{ asset('template/admin/assets/images/logo-mini.svg') }}" alt="logo" /></a>
             <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
               <i class="mdi mdi-menu"></i>
             </button>
@@ -143,7 +143,7 @@
                   <h6 class="p-3 mb-0">Notifications</h6>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face4.jpg" alt="" class="profile-pic" />
+                      <img src="{{ asset('template/admin/assets/images/faces/face4.jpg') }}" alt="" class="profile-pic" />
                     </div>
                     <div class="preview-item-content">
                       <p class="mb-0"> Dany Miles <span class="text-small text-muted">commented on your photo</span>
@@ -152,7 +152,7 @@
                   </a>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face3.jpg" alt="" class="profile-pic" />
+                      <img src="{{ asset('template/admin/assets/images/faces/face3.jpg') }}" alt="" class="profile-pic" />
                     </div>
                     <div class="preview-item-content">
                       <p class="mb-0"> James <span class="text-small text-muted">posted a photo on your wall</span>
@@ -161,7 +161,7 @@
                   </a>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face2.jpg" alt="" class="profile-pic" />
+                      <img src="{{ asset('template/admin/assets/images/faces/face2.jpg') }}" alt="" class="profile-pic" />
                     </div>
                     <div class="preview-item-content">
                       <p class="mb-0"> Alex <span class="text-small text-muted">just mentioned you in his post</span>
@@ -222,7 +222,7 @@
               </li>
               <li class="nav-item nav-profile dropdown border-0">
                 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown">
-                  <img class="nav-profile-img mr-2" alt="" src="assets/images/faces/face1.jpg" />
+                  <img class="nav-profile-img mr-2" alt="" src="{{ asset('template/admin/assets/images/faces/face10.jpg') }}" />
                   <span class="profile-name">{{ Auth::user()->name }}</span>
                 </a>
                 <div class="dropdown-menu navbar-dropdown w-100" aria-labelledby="profileDropdown">
