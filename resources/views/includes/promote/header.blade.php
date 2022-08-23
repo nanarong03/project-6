@@ -51,38 +51,24 @@
                 <a class="dropdown-item" href="blog-single.php">Blog Details</a> -->
               </div>
             </li>
-            <li class="nav-item @@about">
+            <li class="nav-item">
               <a class="nav-link" href="about.php">ข่าวสารกิจกรรม</a>
             </li>
-            <li class="nav-item @@contact">
+            <li class="nav-item">
               <a class="nav-link" href="contact.php">ที่อยู่ - ติดต่อ</a>
               
             </li>
 
-            <li class="nav-item @@contact">
-              <a class="nav-link" href="{{ url('/admin/home') }}">admin</a>
-            </li>
-
-            <li class="nav-item @@contact">
-              <a class="nav-link" href="{{ route('login') }}">login</a>
-            </li>
-
-            <li class="nav-item @@contact">
-              <a class="nav-link" href="{{ route('register') }}">register</a>
-            </li>
-
-
-
 
             @if (Route::has('login'))
               @auth
-              <li class="nav-item @@contact"><a class="nav-link" href="{{ url('/admin/home') }}">admin</a></li>
+              <li class="nav-item "><a class="nav-link" href="{{ url('/admin/home') }}">admin</a></li>
 
             @else
-            <li class="nav-item @@contact"><a class="nav-link" href="{{ route('login') }}">login</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">login</a></li>
 
             @if (Route::has('register'))
-            <li class="nav-item @@contact"><a class="nav-link" href="{{ route('register') }}">register</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">register</a></li>
 
             @endif
 
