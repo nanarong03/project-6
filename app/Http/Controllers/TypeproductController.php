@@ -24,6 +24,20 @@ class TypeproductController extends Controller
     public function index()
     {
         // return view('home');
-         return view('adminpage.admintypeproduct');
+         return view('adminpage.typeproduct.admintypeproduct');
+    }
+
+
+    public function add()
+    {
+        // return view('add');
+         return view('adminpage.typeproduct.add');
+    }
+
+
+    public function edit()
+    {
+        // return view('edit');
+         return view('adminpage.typeproduct.edit');
     }
 }

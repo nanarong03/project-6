@@ -23,15 +23,25 @@ Auth::routes();
 
 Route::get('/admin/home',  [App\Http\Controllers\HomeController::class, 'index'])->name('adminpage.adminhome');
 
-Route::get('/admin/product',  [App\Http\Controllers\ProductController::class, 'index'])->name('adminpage.adminproduct');
+Route::get('/admin/product',  [App\Http\Controllers\ProductController::class, 'index'])->name('adminpage.product.adminproduct');
+Route::get('/admin/product/add',  [App\Http\Controllers\ProductController::class, 'add'])->name('adminpage.product.add');
+Route::get('/admin/product/edit',  [App\Http\Controllers\ProductController::class, 'edit'])->name('adminpage.product.edit');
 
-Route::get('/admin/typeproduct',  [App\Http\Controllers\TypeproductController::class, 'index'])->name('adminpage.admintypeproduct');
+Route::get('/admin/typeproduct',  [App\Http\Controllers\TypeproductController::class, 'index'])->name('adminpage.typeproduct.admintypeproduct');
+Route::get('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'add'])->name('adminpage.typeproduct.add');
+Route::get('/admin/typeproduct/edit',  [App\Http\Controllers\TypeproductController::class, 'edit'])->name('adminpage.typeproduct.edit');
 
-Route::get('/admin/newandevent',  [App\Http\Controllers\NewandeventController::class, 'index'])->name('adminpage.adminnewandevent');
+Route::get('/admin/newandevent',  [App\Http\Controllers\NewandeventController::class, 'index'])->name('adminpage.newandevent.adminnewandevent');
+Route::get('/admin/newandevent/add',  [App\Http\Controllers\NewandeventController::class, 'add'])->name('adminpage.newandevent.add');
+Route::get('/admin/newandevent/edit',  [App\Http\Controllers\NewandeventController::class, 'edit'])->name('adminpage.newandevent.edit');
 
-Route::get('/admin/detailuser',  [App\Http\Controllers\DetailuserController::class, 'index'])->name('adminpage.admindetailuser');
+Route::get('/admin/detailuser',  [App\Http\Controllers\DetailuserController::class, 'index'])->name('adminpage.detailuser.admindetailuser');
+Route::get('/admin/detailuser/add',  [App\Http\Controllers\DetailuserController::class, 'add'])->name('adminpage.detailuser.add');
+Route::get('/admin/detailuser/edit',  [App\Http\Controllers\DetailuserController::class, 'edit'])->name('adminpage.detailuser.edit');
 
-Route::get('/admin/user',  [App\Http\Controllers\UserController::class, 'index'])->name('adminpage.adminuser');
+Route::get('/admin/user',  [App\Http\Controllers\UserController::class, 'index'])->name('adminpage.user.adminuser');
+Route::get('/admin/user/add',  [App\Http\Controllers\UserController::class, 'add'])->name('adminpage.user.add');
+Route::get('/admin/user/edit',  [App\Http\Controllers\UserController::class, 'edit'])->name('adminpage.user.edit');
 
 
 //End Admin//

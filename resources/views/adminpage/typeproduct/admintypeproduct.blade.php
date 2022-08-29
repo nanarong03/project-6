@@ -35,7 +35,7 @@ cursor: pointer;
 }
 
 .button2:hover {
-  background-color: gray;
+  background-color: red;
   color: white;
 }
 
@@ -83,7 +83,7 @@ image{
               <div class="col-lg-12 stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">ตารางข่าวสารและกิจกรรม  <td> <a href="productaddform.php" class="button-success">เพิ่มข้อมูล</button></a></td> </h4>
+                    <h4 class="card-title">ตารางประเภทสินค้า  <td> <a href="{{url('admin/typeproduct/add')}}" class="button-success">เพิ่มข้อมูล</button></a></td> </h4>
                     
                     <div class="table-responsive">
                       <table class="table table-bordered">
@@ -105,7 +105,7 @@ image{
                             <td>เข็มขัด</td>
                             <td>$179</td>
                             <td>May 15, 2015</td>
-                            <td> <a href="productedit.php" class="button button1">แก้ไขข้อมูล</button></td>
+                            <td> <a href="{{url('admin/typeproduct/edit')}}" class="button button1">แก้ไขข้อมูล</button></td>
                             <td> <a href="productdelete.php" class="button button2">ลบ</button></a></td>
                           </tr>
                           <tr class="table-warning">
@@ -114,7 +114,7 @@ image{
                             <td>Flash</td>
                             <td>$245.30</td>
                             <td>July 1, 2015</td>
-                            <td> <a href="productedit.php" class="button button1">แก้ไขข้อมูล</button></td></a></td>
+                            <td> <a href="{{url('admin/typeproduct/edit')}}" class="button button1">แก้ไขข้อมูล</button></td></a></td>
                             <td> <a href="productdelete.php" class="button button2">ลบ</button></a></td>
                           </tr>
                           <tr class="table-danger">
@@ -123,7 +123,7 @@ image{
                             <td>Premeire</td>
                             <td>$138.00</td>
                             <td>Apr 12, 2015</td>
-                            <td> <a href="productedit.php" class="button button1">แก้ไขข้อมูล</button></td></a></td>
+                            <td> <a href="{{url('admin/typeproduct/edit')}}" class="button button1">แก้ไขข้อมูล</button></td></a></td>
                             <td> <a href="productdelete.php" class="button button2">ลบ</button></a></td>
                           </tr>
                         </tbody>

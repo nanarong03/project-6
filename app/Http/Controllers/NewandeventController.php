@@ -24,6 +24,20 @@ class NewandeventController extends Controller
     public function index()
     {
         // return view('home');
-         return view('adminpage.adminnewandevent');
+         return view('adminpage.newandevent.adminnewandevent');
+    }
+
+
+    public function add()
+    {
+        // return view('add');
+         return view('adminpage.newandevent.add');
+    }
+
+
+    public function edit()
+    {
+        // return view('edit');
+         return view('adminpage.newandevent.edit');
     }
 }

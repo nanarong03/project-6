@@ -24,6 +24,20 @@ class DetailuserController extends Controller
     public function index()
     {
         // return view('home');
-         return view('adminpage.admindetailuser');
+         return view('adminpage.detailuser.admindetailuser');
+    }
+
+
+    public function add()
+    {
+        // return view('add');
+         return view('adminpage.detailuser.add');
+    }
+
+
+    public function edit()
+    {
+        // return view('edit');
+         return view('adminpage.detailuser.edit');
     }
 }
