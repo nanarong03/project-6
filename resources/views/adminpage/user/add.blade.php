@@ -44,6 +44,7 @@ div {
 <div>
 <div>
 <div>
+<h2>เพิ่มข้อมูล</h2>
   <form action="/action_page.php">
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
