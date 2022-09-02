@@ -1,7 +1,6 @@
 @extends('layouts.promote')
 @section('content')
 
-
 <!-- Modal -->
 <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -49,9 +48,7 @@
       </div>
       <div class="modal-body">
         <form action="#" class="row">
-          <div class="col-12">
-            <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Phone">
-          </div>
+          
           <div class="col-12">
             <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Name">
           </div>

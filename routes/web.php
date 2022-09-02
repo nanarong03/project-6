@@ -17,6 +17,19 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');    
 // });
 
+
+//Start Promote อาจารย์เดียร์//
+
+Route::view('/', 'promotepage.home')->name('home');
+Route::view('/house-blend', 'promotepage.house-blend')->name('house-blend');
+Route::view('/product', 'promotepage.product',)->name('product');
+Route::view('/teacher-single', 'promotepage.teacher-single',)->name('teacher-single');
+Route::view('/about', 'promotepage.about',)->name('about');
+Route::view('/contact', 'promotepage.contact',)->name('contact');
+
+//End Promote อาจารย์เดียร์//
+
+
 //Start Admin//
 
 Auth::routes();
@@ -49,14 +62,6 @@ Route::get('/admin/user/edit',  [App\Http\Controllers\UserController::class, 'ed
 
 
 
-//Start Promote อาจารย์เดียร์//
-Route::view('/', 'promotepage.home')->name('home');
-Route::view('/house-blend', 'promotepage.house-blend')->name('house-blend');
 
-
-
-
-
-//End Promote อาจารย์เดียร์//
 
 
