@@ -94,7 +94,9 @@
 <section class="bg-gray">
   <div class="container-fluid p-0">
     <div class="row no-gutters">
-      <div class="col-xl-4 col-lg-5 align-self-end">
+      <div class="col-xl-4 col-lg- align-self-end">
+        <!-- <section class="hero-section bg-cover" data-background="images/banner/belt-index-top.jpg"> -->
+
         <img class="img-fluid w-100" src="{{ asset('template/promote/images/banner/belt-index-top.jpg') }}  " alt="banner-feature">
       </div>
       <div class="col-xl-8 col-lg-7">

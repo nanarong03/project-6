@@ -33,7 +33,7 @@
 
         <div class="collapse navbar-collapse" id="navigation">
           <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item active">
+          <li class="nav-item">
               <a class="nav-link" href="{{url('/')}}">หน้าแรก</a>
             </li>
             <li class="nav-item dropdown view">
@@ -53,31 +53,12 @@
                 <a class="dropdown-item" href="blog-single.php">Blog Details</a> -->
               </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item @@about">
               <a class="nav-link" href="{{url('/about')}}">ข่าวสารกิจกรรม</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item @@contact">
               <a class="nav-link" href="{{url('/contact')}}">ที่อยู่ - ติดต่อ</a>
-              
             </li>
-
-
-            <!-- @if (Route::has('login'))
-              @auth
-              <li class="nav-item "><a class="nav-link" href="{{ url('/admin/home') }}">admin</a></li>
-
-            @else
-            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">login</a></li>
-
-            @if (Route::has('register'))
-            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">register</a></li>
-
-            @endif
-
-            @endauth
-            
-            @endif -->
-
           </ul>
         </div>
       </nav>

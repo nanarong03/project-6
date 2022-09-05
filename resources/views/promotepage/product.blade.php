@@ -100,7 +100,7 @@
       <!-- teacher -->
       <div data-ref="mixitup-target" class="col-lg-4 col-sm-6 mb-5 arts law">
         <div class="card border-0 rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="images/product/flannel1.jpg" alt="teacher">
+          <img class="card-img-top rounded-0" src="{{asset('template/promote/images/product/flannel1.jpg')}}" alt="teacher">
           <div class="card-body">
             <a href="teacher-single.html">
               <h4 class="card-title">ชื่อสินค้า - ประเภท</h4>

@@ -35,13 +35,21 @@ Route::view('/contact', 'promotepage.contact',)->name('contact');
 Auth::routes();
 
 Route::get('/admin/home',  [App\Http\Controllers\HomeController::class, 'index'])->name('adminpage.adminhome');
-
+//R product
 Route::get('/admin/product',  [App\Http\Controllers\ProductController::class, 'index'])->name('adminpage.product.adminproduct');
-Route::get('/admin/product/add',  [App\Http\Controllers\ProductController::class, 'add'])->name('adminpage.product.add');
+//C product
+Route::get('/admin/product/add',  [App\Http\Controllers\ProductController::class, 'formadd'])->name('adminpage.product.formadd');
+
+Route::post('/admin/product/add',  [App\Http\Controllers\ProductController::class, 'addform'])->name('adminpage.product.add');
 Route::get('/admin/product/edit',  [App\Http\Controllers\ProductController::class, 'edit'])->name('adminpage.product.edit');
 
+
+//R typeproduct
 Route::get('/admin/typeproduct',  [App\Http\Controllers\TypeproductController::class, 'index'])->name('adminpage.typeproduct.admintypeproduct');
-Route::get('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'add'])->name('adminpage.typeproduct.add');
+//C typeproduct
+Route::get('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'formadd'])->name('adminpage.typeproduct.formadd');
+
+Route::post('/admin/product/add',  [App\Http\Controllers\ProductController::class, 'addform'])->name('adminpage.typeproduct.add');
 Route::get('/admin/typeproduct/edit',  [App\Http\Controllers\TypeproductController::class, 'edit'])->name('adminpage.typeproduct.edit');
 
 Route::get('/admin/newandevent',  [App\Http\Controllers\NewandeventController::class, 'index'])->name('adminpage.newandevent.adminnewandevent');
