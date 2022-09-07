@@ -9,7 +9,7 @@
           <form action="#">
             <div class="input-wrapper">
               <input type="email" class="form-control border-0" id="newsletter" name="newsletter"
-                placeholder="ทำไวเฉย ๆ">
+                placeholder="ใส่ Gmail">
               <button type="submit" value="send" class="btn btn-primary">เข้าร่วม</button>
             </div>
           </form>

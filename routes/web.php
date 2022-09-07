@@ -44,12 +44,8 @@ Route::post('/admin/product/add',  [App\Http\Controllers\ProductController::clas
 Route::get('/admin/product/edit',  [App\Http\Controllers\ProductController::class, 'edit'])->name('adminpage.product.edit');
 
 
-//R typeproduct
 Route::get('/admin/typeproduct',  [App\Http\Controllers\TypeproductController::class, 'index'])->name('adminpage.typeproduct.admintypeproduct');
-//C typeproduct
-Route::get('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'formadd'])->name('adminpage.typeproduct.formadd');
-
-Route::post('/admin/product/add',  [App\Http\Controllers\ProductController::class, 'addform'])->name('adminpage.typeproduct.add');
+Route::get('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'add'])->name('adminpage.typeproduct.add');
 Route::get('/admin/typeproduct/edit',  [App\Http\Controllers\TypeproductController::class, 'edit'])->name('adminpage.typeproduct.edit');
 
 Route::get('/admin/newandevent',  [App\Http\Controllers\NewandeventController::class, 'index'])->name('adminpage.newandevent.adminnewandevent');
