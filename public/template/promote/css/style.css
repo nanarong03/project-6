@@ -190,7 +190,7 @@ h6, .h6 {
 
 .btn-secondary {
   background: #fff;
-  color: #ffbc3b;
+  color: #786553;
   border: 1px solid #fff;
 }
 
@@ -211,8 +211,8 @@ h6, .h6 {
 }
 
 .btn-primary-outline {
-  border: 1px solid #ffbc3b;
-  color: #ffbc3b;
+  border: 1px solid #786553;
+  color: #786553;
   background: transparent;
 }
 
@@ -378,7 +378,7 @@ a h4:hover {
 }
 
 .text-primary {
-  color: #ffbc3b !important;
+  color: #926840 !important;
 }
 
 .text-color {
@@ -548,7 +548,7 @@ textarea.form-control {
 
 @media (max-width: 575px) {
   .navigation {
-    background-image: linear-gradient(to right, transparent 70%, #ffbc3b 30%);
+    background-image: linear-gradient(to right, transparent 70%, #786553 30%);
   }
 }
 
@@ -646,7 +646,7 @@ link:focus,
 
 .navbar .dropdown-menu {
   box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.12);
-  border-bottom: 5px solid #ffbc3b;
+  border-bottom: 5px solid #786553;
   padding: 15px;
   top: 96px;
   border-radius: 0;
@@ -948,7 +948,7 @@ link:focus,
 /* /teacher */
 /* footer */
 .newsletter {
-  background-image: linear-gradient(to right, transparent 50%, #ffbc3b 50%);
+  background-image: linear-gradient(to right, transparent 50%, #684E47 50%);
   margin-bottom: -100px;
   position: relative;
   z-index: 1;
