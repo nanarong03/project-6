@@ -35,29 +35,41 @@ Route::view('/contact', 'promotepage.contact',)->name('contact');
 Auth::routes();
 
 Route::get('/admin/home',  [App\Http\Controllers\HomeController::class, 'index'])->name('adminpage.adminhome');
+
 //R product
 Route::get('/admin/product',  [App\Http\Controllers\ProductController::class, 'index'])->name('adminpage.product.adminproduct');
 //C product
 Route::get('/admin/product/add',  [App\Http\Controllers\ProductController::class, 'formadd'])->name('adminpage.product.formadd');
-
 Route::post('/admin/product/add',  [App\Http\Controllers\ProductController::class, 'addform'])->name('adminpage.product.add');
 Route::get('/admin/product/edit',  [App\Http\Controllers\ProductController::class, 'edit'])->name('adminpage.product.edit');
 
-
+//R typeproduct
 Route::get('/admin/typeproduct',  [App\Http\Controllers\TypeproductController::class, 'index'])->name('adminpage.typeproduct.admintypeproduct');
-Route::get('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'add'])->name('adminpage.typeproduct.add');
+//C typeproduct
+Route::get('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'formadd'])->name('adminpage.typeproduct.formadd');
+Route::post('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'addform'])->name('adminpage.typeproduct.add');
 Route::get('/admin/typeproduct/edit',  [App\Http\Controllers\TypeproductController::class, 'edit'])->name('adminpage.typeproduct.edit');
 
+//R newandevent
 Route::get('/admin/newandevent',  [App\Http\Controllers\NewandeventController::class, 'index'])->name('adminpage.newandevent.adminnewandevent');
-Route::get('/admin/newandevent/add',  [App\Http\Controllers\NewandeventController::class, 'add'])->name('adminpage.newandevent.add');
+//C newandevent
+Route::get('/admin/newandevent/add',  [App\Http\Controllers\NewandeventController::class, 'formadd'])->name('adminpage.newandevent.formadd');
+Route::post('/admin/newandevent/add',  [App\Http\Controllers\NewandeventController::class, 'addform'])->name('adminpage.newandevent.add');
 Route::get('/admin/newandevent/edit',  [App\Http\Controllers\NewandeventController::class, 'edit'])->name('adminpage.newandevent.edit');
 
+//R detailuser
 Route::get('/admin/detailuser',  [App\Http\Controllers\DetailuserController::class, 'index'])->name('adminpage.detailuser.admindetailuser');
-Route::get('/admin/detailuser/add',  [App\Http\Controllers\DetailuserController::class, 'add'])->name('adminpage.detailuser.add');
+//C detailuser
+Route::get('/admin/detailuser/add',  [App\Http\Controllers\DetailuserController::class, 'formadd'])->name('adminpage.detailuser.formadd');
+Route::post('/admin/detailuser/add',  [App\Http\Controllers\DetailuserController::class, 'addform'])->name('adminpage.detailuser.add');
 Route::get('/admin/detailuser/edit',  [App\Http\Controllers\DetailuserController::class, 'edit'])->name('adminpage.detailuser.edit');
 
+
+//R user
 Route::get('/admin/user',  [App\Http\Controllers\UserController::class, 'index'])->name('adminpage.user.adminuser');
-Route::get('/admin/user/add',  [App\Http\Controllers\UserController::class, 'add'])->name('adminpage.user.add');
+//C user
+Route::get('/admin/user/add',  [App\Http\Controllers\UserController::class, 'formadd'])->name('adminpage.user.formadd');
+Route::post('/admin/user/add',  [App\Http\Controllers\UserController::class, 'addform'])->name('adminpage.user.add');
 Route::get('/admin/user/edit',  [App\Http\Controllers\UserController::class, 'edit'])->name('adminpage.user.edit');
 
 

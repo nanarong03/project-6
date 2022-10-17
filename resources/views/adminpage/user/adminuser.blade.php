@@ -90,41 +90,25 @@ image{
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th><div>First name</div></th>
-                            <th><div>Product</div></th>
-                            <th><div>Amount</div></th>
-                            <th><div>Deadline</div></th>
+                            <th><div>Username</div></th>
+                            <th><div>Email</div></th>
                             <th><div>Edit</div></th>
                             <th><div>Delete</div></th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr class="table-info">
-                            <td>1</td>
-                            <td>ดำเกิง  ทองสาริ</td>
-                            <td>เข็มขัด</td>
-                            <td>$179</td>
-                            <td>May 15, 2015</td>
-                            <td> <a href="{{url('admin/user/edit')}}" class="button button1">แก้ไขข้อมูล</button></td>
-                            <td> <a href="productdelete.php" class="button button2">ลบ</button></a></td>
+                        @foreach($user as $row)
+                          <tr class="table table-bordered">
+                            <td>{{ $row ->id}}</td>
+                            <td>{{ $row ->username}}</td>
+                            <td>{{ $row ->email}}</td>
+
+                            <td><a href="{{url('admin/user/edit')}}">
+                              <button class="">Edit</button></a></td>
+                              <form><td><button type="delete" class="delete">
+                                Delete</button></td></form>
                           </tr>
-                          <tr class="table-warning">
-                            <td>2</td>
-                            <td>กมล  ฉัตร</td>
-                            <td>Flash</td>
-                            <td>$245.30</td>
-                            <td>July 1, 2015</td>
-                            <td> <a href="{{url('admin/user/edit')}}" class="button button1">แก้ไขข้อมูล</button></td></a></td>
-                            <td> <a href="productdelete.php" class="button button2">ลบ</button></a></td>
-                          </tr>
-                          <tr class="table-danger">
-                            <td>3</td>
-                            <td>จอนห์  โอเซนท์</td>
-                            <td>Premeire</td>
-                            <td>$138.00</td>
-                            <td>Apr 12, 2015</td>
-                            <td> <a href="{{url('admin/user/edit')}}" class="button button1">แก้ไขข้อมูล</button></td></a></td>
-                            <td> <a href="productdelete.php" class="button button2">ลบ</button></a></td>
+                          @endforeach
                           </tr>
                         </tbody>
                       </table>
@@ -136,16 +120,6 @@ image{
           </div>
             </div>
             
-           
-
-
-           
-
-          
-           
-
-
-
             <div class="row">
               
               <div class="col-xl-4 col-md-6 grid-margin stretch-card">

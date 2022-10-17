@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Product;
 use App\Models\products;
 use Illuminate\Http\Request;
 
@@ -24,11 +23,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //R read
-        $products = Products::all();
-         return view('adminpage.product.adminproduct', compact('products'));
+       //R read
+       $products = products::all();
+       return view('adminpage.product.adminproduct' , compact('products'));
     }
-
 
     public function formadd()
     {
@@ -49,7 +47,6 @@ class ProductController extends Controller
          ]);
 
          products::create($request->all());
-
          return redirect()->route('adminpage.product.adminproduct');
     }
     

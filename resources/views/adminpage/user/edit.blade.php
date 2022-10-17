@@ -46,18 +46,12 @@ div {
 <div>
 <h2>แก้ไขข้อมูล</h2>
   <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  <label for="fname">Username</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your Username..">
 
-    <label for="lname">Product</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Product..">
-
-    <label for="lname">Amount</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Amount..">
-
-    <label for="lname">Deadline</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Deadline..">
-
+    <label for="lname">Email</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your Email..">
+    
     <!-- <label for="country">Country</label>
     <select id="country" name="country">
       <option value="australia">Australia</option>

@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
-use app\Models\User;
 
 class UserController extends Controller
 {
@@ -24,27 +23,42 @@ class UserController extends Controller
      */
     public function index()
     {
-        $read = User::all();
+        //R read
+        $user = user::all();
+        return view('adminpage.user.adminuser' , compact('user'));
+    }
 
-        // return view('home');
-         return view('adminpage.user.adminuser' , compact('read'));
+    public function formadd()
+    {
+        //C1 ->Form
+         return view('adminpage.user.add');
     }
 
 
+    public function addform(Request $request)
+    {
+        //C2 ->create
+         $request ->validate([
+            //'picture'=>null',
+            'username'=> 'nullable',
+            'email'=> 'nullable',
+         ]);
+
+         User::create($request->all());
+         return redirect()->route('adminpage.user.adminuser');
+    }
+    
+
     public function add()
     {
-        $read = User::all();
-
         // return view('add');
-         return view('adminpage.user.add' , compact('read'));
+         return view('adminpage.user.add' );
     }
 
 
     public function edit()
     {
-        $read = User::all();
-
         // return view('edit');
-         return view('adminpage.user.edit' , compact('read'));
+         return view('adminpage.user.edit');
     }
 }

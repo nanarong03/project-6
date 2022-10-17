@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class TypeProducts extends Model
+class Typeproduct extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $table ='type_products';
+    protected $table ='Typeproduct';
     protected $fillable =[
         'name',
         'iamge',
+        'created_by',
+        'updated_by',
     ];
 }

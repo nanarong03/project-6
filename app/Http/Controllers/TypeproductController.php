@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Typeproduct;
 use Illuminate\Http\Request;
 
 class TypeproductController extends Controller
@@ -22,10 +23,29 @@ class TypeproductController extends Controller
      */
     public function index()
     {
-        // return view('typeproduct');
-         return view('adminpage.typeproduct.admintypeproduct');
+        //R read
+       $typeproduct = typeproduct::all();
+       return view('adminpage.typeproduct.admintypeproduct' , compact('typeproduct'));
     }
 
+    public function formadd()
+    {
+        //C1 ->Form
+         return view('adminpage.typeproduct.add');
+    }
+
+    public function addform(Request $request)
+    {
+        //C2 ->create
+         $request ->validate([
+            //'picture'=>null',
+            'name'=> 'nullable',
+            'image'=> 'nullable',
+         ]);
+
+         Typeproduct::create($request->all());
+         return redirect()->route('adminpage.typeproduct.admintypeproduct');
+    }
 
     public function add()
     {

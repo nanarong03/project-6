@@ -100,7 +100,7 @@ image{
                         </thead>
                         <tbody>
                           @foreach($products as $row)
-                          <tr class="table-info">
+                          <tr class="table table-bordered">
                             <td>{{ $row ->id}}</td>
                             <td>{{ $row ->name}}</td>
                             <td>{{ $row ->details}}</td>
@@ -108,7 +108,7 @@ image{
                             <td>{{ $row ->image}}</td>
 
                             <td><a href="{{url('admin/product/edit')}}">
-                              <button class="">Modify</button></a></td>
+                              <button class="">Edit</button></a></td>
                               <form><td><button type="delete" class="delete">
                                 Delete</button></td></form>
                           </tr>

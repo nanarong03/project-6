@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Newandevent;
 use Illuminate\Http\Request;
 
 class NewandeventController extends Controller
@@ -22,10 +23,30 @@ class NewandeventController extends Controller
      */
     public function index()
     {
-        // return view('home');
-         return view('adminpage.newandevent.adminnewandevent');
+        //R read
+       $newandevent = newandevent::all();
+       return view('adminpage.newandevent.adminnewandevent' , compact('newandevent'));
     }
 
+    public function formadd()
+    {
+        //C1 ->Form
+         return view('adminpage.newandevent.add');
+    }
+
+    public function addform(Request $request)
+    {
+        //C2 ->create
+         $request ->validate([
+            //'picture'=>null',
+            'name'=> 'nullable',
+            'detail'=> 'nullable',
+            'image'=> 'nullable',
+         ]);
+
+         Newandevent::create($request->all());
+         return redirect()->route('adminpage.newandevent.adminnewandevent');
+    }
 
     public function add()
     {

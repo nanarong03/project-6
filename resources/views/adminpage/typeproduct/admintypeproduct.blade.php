@@ -95,32 +95,18 @@ image{
                           </tr>
                         </thead>
                         <tbody>
-                          <tr class="table-info">
-                            <td>1</td>
-                            <td>ดำเกิง  ทองสาริ</td>
-                            <td>เข็มขัด</td>
-                            <td>$179</td>
-                            <td>May 15, 2015</td>
-                            <td> <a href="{{url('admin/detailuser/edit')}}" class="button button1">แก้ไขข้อมูล</button></td>
-                            <td> <a href="productdelete.php" class="button button2">ลบ</button></a></td>
+                        @foreach($Typeproduct as $row)
+                          <tr class="table table-bordered">
+                            <td>{{ $row ->id}}</td>
+                            <td>{{ $row ->name}}</td>
+                            <td>{{ $row ->image}}</td>
+
+                            <td><a href="{{url('admin/typeproduct/edit')}}">
+                              <button class="">Edit</button></a></td>
+                              <form><td><button type="delete" class="delete">
+                                Delete</button></td></form>
                           </tr>
-                          <tr class="table-warning">
-                            <td>2</td>
-                            <td>กมล  ฉัตร</td>
-                            <td>Flash</td>
-                            <td>$245.30</td>
-                            <td>July 1, 2015</td>
-                            <td> <a href="{{url('admin/detailuser/edit')}}" class="button button1">แก้ไขข้อมูล</button></td></a></td>
-                            <td> <a href="productdelete.php" class="button button2">ลบ</button></a></td>
-                          </tr>
-                          <tr class="table-danger">
-                            <td>3</td>
-                            <td>จอนห์  โอเซนท์</td>
-                            <td>Premeire</td>
-                            <td>$138.00</td>
-                            <td>Apr 12, 2015</td>
-                            <td> <a href="{{url('admin/detailuser/edit')}}" class="button button1">แก้ไขข้อมูล</button></td></a></td>
-                            <td> <a href="productdelete.php" class="button button2">ลบ</button></a></td>
+                          @endforeach
                           </tr>
                         </tbody>
                       </table>

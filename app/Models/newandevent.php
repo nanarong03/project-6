@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class contact extends Model
+class Newandevent extends Model
 {
     use HasFactory,SoftDeletes;
-    protected $table ='products';
+    protected $table ='newandevent';
     protected $fillable =[
         'name',
         'details',
         'image',
+        'created_by',
+        'updated_by',
     ];
 }

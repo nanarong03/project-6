@@ -45,19 +45,19 @@ div {
 <div>
 <div>
 <h2>เพิ่มข้อมูล</h2>
-  <form action="{{ route('adminpage.product.add') }}"method="POST"class="forms-sample">
+<form action="{{ route('adminpage.product.add') }}"method="POST"class="forms-sample">
   @csrf
     <label for="fname">Product name</label>
-    <input type="name" id="fname" name="Product name" placeholder="Product name.."><br>
+    <input type="name" id="fname" name="Product name" placeholder="Product name.."name="name"><br>
 
     <label for="lname">Details</label>
-    <input type="text" id="lname" name="details" placeholder="Your details..">
+    <input type="text" id="lname" name="details" placeholder="Your details.."name="name">
 
     <label for="lname">Price</label>
-    <input type="text" id="lname" name="price" placeholder="Your price..">
+    <input type="text" id="lname" name="price" placeholder="Your price.."name="name">
 
     <label for="lname">Image</label>
-    <input type="text" id="lname" name="image" placeholder="Your image..">
+    <input type="text" id="lname" name="image" placeholder="Your image.."name="name">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">
