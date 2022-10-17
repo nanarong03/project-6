@@ -9,8 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Typeproduct extends Model
 {
     use HasFactory,SoftDeletes;
-
-    protected $table ='Typeproduct';
+    protected $table ='type_product';
     protected $fillable =[
         'name',
         'iamge',

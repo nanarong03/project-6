@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Typeproduct;
 use Illuminate\Http\Request;
 
-class TypeproductController extends Controller
+class TypeProductController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,8 +24,8 @@ class TypeproductController extends Controller
     public function index()
     {
         //R read
-       $typeproduct = typeproduct::all();
-       return view('adminpage.typeproduct.admintypeproduct' , compact('typeproduct'));
+       $Typeproduct = Typeproduct::all();
+       return view('adminpage.typeproduct.admintypeproduct' , compact('Typeproduct'));
     }
 
     public function formadd()

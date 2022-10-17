@@ -90,7 +90,7 @@ image{
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th><div>First name</div></th>
+                            <th><div>Product name</div></th>
                             <th><div>image</div></th>
                           </tr>
                         </thead>

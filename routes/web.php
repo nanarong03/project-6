@@ -44,11 +44,11 @@ Route::post('/admin/product/add',  [App\Http\Controllers\ProductController::clas
 Route::get('/admin/product/edit',  [App\Http\Controllers\ProductController::class, 'edit'])->name('adminpage.product.edit');
 
 //R typeproduct
-Route::get('/admin/typeproduct',  [App\Http\Controllers\TypeproductController::class, 'index'])->name('adminpage.typeproduct.admintypeproduct');
+Route::get('/admin/typeproduct',  [App\Http\Controllers\TypeProductController::class, 'index'])->name('adminpage.typeproduct.admintypeproduct');
 //C typeproduct
-Route::get('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'formadd'])->name('adminpage.typeproduct.formadd');
-Route::post('/admin/typeproduct/add',  [App\Http\Controllers\TypeproductController::class, 'addform'])->name('adminpage.typeproduct.add');
-Route::get('/admin/typeproduct/edit',  [App\Http\Controllers\TypeproductController::class, 'edit'])->name('adminpage.typeproduct.edit');
+Route::get('/admin/typeproduct/add',  [App\Http\Controllers\TypeProductController::class, 'formadd'])->name('adminpage.typeproduct.formadd');
+Route::post('/admin/typeproduct/add',  [App\Http\Controllers\TypeProductController::class, 'addform'])->name('adminpage.typeproduct.add');
+Route::get('/admin/typeproduct/edit',  [App\Http\Controllers\TypeProductController::class, 'edit'])->name('adminpage.typeproduct.edit');
 
 //R newandevent
 Route::get('/admin/newandevent',  [App\Http\Controllers\NewandeventController::class, 'index'])->name('adminpage.newandevent.adminnewandevent');
@@ -63,7 +63,6 @@ Route::get('/admin/detailuser',  [App\Http\Controllers\DetailuserController::cla
 Route::get('/admin/detailuser/add',  [App\Http\Controllers\DetailuserController::class, 'formadd'])->name('adminpage.detailuser.formadd');
 Route::post('/admin/detailuser/add',  [App\Http\Controllers\DetailuserController::class, 'addform'])->name('adminpage.detailuser.add');
 Route::get('/admin/detailuser/edit',  [App\Http\Controllers\DetailuserController::class, 'edit'])->name('adminpage.detailuser.edit');
-
 
 //R user
 Route::get('/admin/user',  [App\Http\Controllers\UserController::class, 'index'])->name('adminpage.user.adminuser');
