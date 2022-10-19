@@ -48,10 +48,10 @@ div {
 <form action="{{ route('adminpage.typeproduct.add') }}"method="POST"class="forms-sample">
   @csrf
     <label for="fname">Typeproduct name</label>
-    <input type="text" id="fname" name="Typeproduct name" placeholder="Your Typeproduct name.."name="name">
+    <input type="text" id="fname" name="Typeproduct name" placeholder="Add your Typeproduct name.."name="name">
 
     <label for="lname">Image</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Image.."name="name">
+    <input type="text" id="lname" name="lastname" placeholder="Add your Image.."name="name">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">

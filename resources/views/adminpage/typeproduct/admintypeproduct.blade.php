@@ -90,8 +90,10 @@ image{
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th><div>Product name</div></th>
-                            <th><div>image</div></th>
+                            <th><div>Typeproduct name</div></th>
+                            <th><div>Image</div></th>
+                            <th><div>Edit</div></th>
+                            <th><div>Delete</div></th>
                           </tr>
                         </thead>
                         <tbody>

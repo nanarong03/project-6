@@ -90,10 +90,9 @@ image{
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th><div>First name</div></th>
-                            <th><div>Product</div></th>
-                            <th><div>Amount</div></th>
-                            <th><div>Deadline</div></th>
+                            <th><div>New name</div></th>
+                            <th><div>New details</div></th>
+                            <th><div>New image</div></th>
                             <th><div>Edit</div></th>
                             <th><div>Delete</div></th>
                           </tr>
@@ -105,7 +104,6 @@ image{
                             <td>{{ $row ->name}}</td>
                             <td>{{ $row ->details}}</td>
                             <td>{{ $row ->image}}</td>
-
                             <td><a href="{{url('admin/newandevent/edit')}}">
                               <button class="">Edit</button></a></td>
                               <form><td><button type="delete" class="delete">

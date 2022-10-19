@@ -91,9 +91,9 @@ image{
                           <tr>
                             <th>#</th>
                             <th><div>Name</div></th>
-                            <th><div>details</div></th>
-                            <th><div>price</div></th>
-                            <th><div>image</div></th>
+                            <th><div>Details</div></th>
+                            <th><div>Price</div></th>
+                            <th><div>Image</div></th>
                             <th><div>Edit</div></th>
                             <th><div>Delete</div></th>
                           </tr>

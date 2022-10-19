@@ -48,16 +48,16 @@ div {
 <form action="{{ route('adminpage.product.add') }}"method="POST"class="forms-sample">
   @csrf
     <label for="fname">Product name</label>
-    <input type="name" id="lname" name="Product name" placeholder="Product name.."name="name"><br>
+    <input type="text" id="fname" name="Product name" placeholder="Add your product name.."name="name"><br>
 
     <label for="lname">Details</label>
-    <input type="text" id="lname" name="details" placeholder="Your details.."name="name">
+    <input type="text" id="lname" name="details" placeholder="Add your details.."name="name">
 
     <label for="lname">Price</label>
-    <input type="text" id="lname" name="price" placeholder="Your price.."name="name">
+    <input type="text" id="lname" name="price" placeholder="Add your price.."name="name">
 
     <label for="lname">Image</label>
-    <input type="text" id="lname" name="image" placeholder="Your image.."name="name">
+    <input type="text" id="lname" name="image" placeholder="Add your image.."name="name">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">

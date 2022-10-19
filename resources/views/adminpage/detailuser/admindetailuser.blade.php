@@ -90,9 +90,9 @@ image{
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th><div>Name</div></th>
-                            <th><div>details</div></th>
-                            <th><div>image</div></th>
+                            <th><div>Name contact</div></th>
+                            <th><div>Details contact</div></th>
+                            <th><div>Image</div></th>
                             <th><div>Edit</div></th>
                             <th><div>Delete</div></th>
                           </tr>

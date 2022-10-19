@@ -47,17 +47,14 @@ div {
 <h2>เพิ่มข้อมูล</h2>
 <form action="{{ route('adminpage.detailuser.add') }}"method="POST"class="forms-sample">
   @csrf
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.."name="name">
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name contact.."name="name">
 
-    <label for="lname">Product</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Product.."name="name">
+    <label for="lname">Details</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your Details contact.."name="name">
 
-    <label for="lname">Amount</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Amount.."name="name">
-
-    <label for="lname">Deadline</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Deadline.."name="name">
+    <label for="lname">image</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your image.."name="name">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">
