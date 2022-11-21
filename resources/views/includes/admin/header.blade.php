@@ -4,20 +4,7 @@
           <a class="sidebar-brand brand-logo" href="{{ url('/admin/home') }}"><img src="{{ asset('template/admin/assets/images/logo.svg') }} " alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="{{ url('/admin/home') }}"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
-        <ul class="nav">
-          <li class="nav-item nav-profile">
-            <a href="{{ url('/admin/home') }}" class="nav-link">
-              <div class="nav-profile-image">
-                <img src="{{ asset('template/admin/assets/images/faces/face1.jpg') }}" alt="profile" />
-                <span class="login-status online"></span>
-                <!-- change to offline or busy as needed -->
-              </div>
-              <div class="nav-profile-text d-flex flex-column pr-3">
-                <span class="font-weight-medium mb-2">Admin</span>
-              </div>
-              </span>
-            </a>
-          </li>
+        <ul class="nav"><br>
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/admin/home') }}">
               <i class="mdi mdi-home menu-icon"></i>
