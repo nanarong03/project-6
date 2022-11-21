@@ -48,7 +48,7 @@
       </div>
       <div class="modal-body">
         <form action="#" class="row">
-          
+
           <div class="col-12">
             <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Name">
           </div>
@@ -63,9 +63,9 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
 
-<!-- hero slider --> 
+<!-- hero slider -->
 <section class="hero-section overlay bg-cover" data-background="url('template/promote/images/banner/belt.jpg')">
   <div class="container">
     <div class="hero-slider">
@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="hero-slider-item">
-        
+
       </div>
     </div>
   </div>
@@ -249,7 +249,7 @@
 </section>
 <!-- /cta -->
 
-<!-- success story -->
+{{-- <!-- success story -->
 <section class="section bg-cover" data-background="images/backgrounds/belt-r.jpg">
   <div class="container">
     <div class="row">
@@ -270,17 +270,17 @@
     </div>
   </div>
 </section>
-<!-- /success story -->
+<!-- /success story --> --}}
 
 <!--Row-->
-<section class="section bg-cover" data-background="images/backgrounds/belt-row.jpg">
+{{-- <section class="section bg-cover" data-background="images/backgrounds/belt-row.jpg">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-sm-4 position-relative success-video">
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 
 <!-- footer -->
 <footer>
