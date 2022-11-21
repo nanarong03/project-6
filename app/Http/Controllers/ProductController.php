@@ -70,8 +70,8 @@ class ProductController extends Controller
 
          return redirect()->route('adminpage.product.adminproduct');
     }
-    
-    
+
+
     public function add()
     {
           // return view('add');
@@ -88,16 +88,42 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
-        $products = Products::find($id);
-        $products->name = $request->name;
-        $products->detail = $request->detail;
-        $products->price = $request->price;
-        $products->image = $request->image;
-        $products->save();
+
+        $product = Products::find($id);
+
+        $request->validate([
+
+            'name' => 'nullable',
+            'detail' => 'nullable',
+
+        ]);
+
+        if( $request->file('image') ){
+
+            $file = $request->file('image');
+            $filename = date('YmdHi') . '_' . $file->getClientOriginalName();
+            $file->move( public_path('product'), $filename );
+
+        }else{
+
+            $filename = $product->image;
+
+        }
+
+        $product->update([
+
+            'name' => $request->name,
+            'detail' => $request->detail,
+            'price' => $request->price,
+            'image' => $filename
+
+        ]);
+
         return redirect()->route('adminpage.product.adminproduct');
+
     }
 
-    public function delete($id){ 
+    public function delete($id){
         $products= Products::find($id);
         $products->delete();
         return redirect()->route('adminpage.product.adminproduct');

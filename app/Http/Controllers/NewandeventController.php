@@ -82,12 +82,39 @@ class NewandeventController extends Controller
 
     public function update(Request $request, $id)
     {
-        $newandevent = Newandevent::find($id);
-        $newandevent->name = $request->name;
-        $newandevent->detail = $request->detail;
-        $newandevent->image = $request->image;
-        $newandevent->save();
+
+        $product = Newandevent::find($id);
+
+        $request->validate([
+
+            'name' => 'nullable',
+            'detail' => 'nullable',
+
+        ]);
+
+        if( $request->file('image') ){
+
+            $file = $request->file('image');
+            $filename = date('YmdHi') . '_' . $file->getClientOriginalName();
+            $file->move( public_path('newandevent'), $filename );
+
+        }else{
+
+            $filename = $product->image;
+
+        }
+
+        $product->update([
+
+            'name' => $request->name,
+            'detail' => $request->detail,
+            'price' => $request->price,
+            'image' => $filename
+
+        ]);
+
         return redirect()->route('adminpage.newandevent.adminnewandevent');
+
     }
 
     public function delete($id){

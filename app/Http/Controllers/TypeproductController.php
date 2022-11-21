@@ -84,11 +84,39 @@ class TypeProductController extends Controller
 
     public function update(Request $request, $id)
     {
-        $Typeproduct = Typeproduct::find($id);
-        $Typeproduct->name = $request->name;
-        $Typeproduct->image = $request->image;
-        $Typeproduct->save();
+
+        $product = Typeproduct::find($id);
+
+        $request->validate([
+
+            'name' => 'nullable',
+            'detail' => 'nullable',
+
+        ]);
+
+        if( $request->file('image') ){
+
+            $file = $request->file('image');
+            $filename = date('YmdHi') . '_' . $file->getClientOriginalName();
+            $file->move( public_path('typeproduct'), $filename );
+
+        }else{
+
+            $filename = $product->image;
+
+        }
+
+        $product->update([
+
+            'name' => $request->name,
+            'detail' => $request->detail,
+            'price' => $request->price,
+            'image' => $filename
+
+        ]);
+
         return redirect()->route('adminpage.typeproduct.admintypeproduct');
+
     }
 
     public function delete($id){

@@ -66,7 +66,7 @@
 </div>
 
 <!-- hero slider -->
-<img class="img-fluid w-100" data-background="url('/template/promote/images/banner/belt-index-top.jpg')">
+<section class="hero-section overlay bg-cover" data-background="url('template/promote/images/banner/belt.jpg')">
 
     {{-- src={{ asset('template/promote/images/banner/belt.jpg') }}> --}}
 

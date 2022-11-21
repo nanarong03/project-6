@@ -48,13 +48,13 @@ div {
 <form action="{{ url('/admin/detailuser/update/'.$detailuser->id) }}" method="POST" enctype="multipart/form-data">
 @csrf
     <label for="fname">Name</label>
-    <input type="text" id="fname" name="name" value="{{$products->name}}" placeholder="Edit your name..">
+    <input type="text" id="fname" name="name" value="{{$detailuser->name}}" placeholder="Edit your name..">
 
     <label for="lname">Detail</label>
-    <input type="text" id="lname" name="detail" value="{{$products->detail}}" placeholder="Edit your details..">
+    <input type="text" id="lname" name="detail" value="{{$detailuser->detail}}" placeholder="Edit your details..">
 
     <label for="lname">Image</label>
-    <input type="file" id="lname" name="image"value="{{$products->image}}" placeholder="Edit your image..">
+    <input type="file" id="lname" name="image"value="{{$detailuser->image}}" placeholder="Edit your image..">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">
@@ -62,7 +62,7 @@ div {
       <option value="canada">Canada</option>
       <option value="usa">USA</option>
     </select> -->
-  
+
     <input type="submit" value="Submit">
   </form>
 </div>

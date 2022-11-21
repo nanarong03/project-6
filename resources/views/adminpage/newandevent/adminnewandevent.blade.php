@@ -91,8 +91,9 @@ image{
                           <tr>
                             <th>#</th>
                             <th><div>New name</div></th>
-                            <th><div>New details</div></th>
-                            <th><div>New image</div></th>
+                            <th><div>detail</div></th>
+                            <th><div>image</div></th>
+                            <th><div>image</div></th>
                             <th><div>Edit</div></th>
                             <th><div>Delete</div></th>
                           </tr>
@@ -111,7 +112,7 @@ image{
                                 {{ __('ไม่มีรูป') }}
                                 @endif
                               </td>
-
+                              <td><a href="{{url('/admin/newandevent/edit/'.$row->id)}}"><button  class="edit" >edit</button></td></a>
                               <td><a href="{{url('/admin/newandevent/delete/'.$row->id)}}"><button  class="delete" >Delete</button></td></a>
                           </tr>
                           @endforeach

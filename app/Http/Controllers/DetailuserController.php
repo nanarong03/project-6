@@ -83,12 +83,39 @@ class DetailuserController extends Controller
 
     public function update(Request $request, $id)
     {
-        $detailuser = detailuser::find($id);
-        $detailuser->name = $request->name;
-        $detailuser->detail = $request->detail;
-        $detailuser->image = $request->image;
-        $detailuser->save();
+
+        $product = detailuser::find($id);
+
+        $request->validate([
+
+            'name' => 'nullable',
+            'detail' => 'nullable',
+
+        ]);
+
+        if( $request->file('image') ){
+
+            $file = $request->file('image');
+            $filename = date('YmdHi') . '_' . $file->getClientOriginalName();
+            $file->move( public_path('detailuser'), $filename );
+
+        }else{
+
+            $filename = $product->image;
+
+        }
+
+        $product->update([
+
+            'name' => $request->name,
+            'detail' => $request->detail,
+            'price' => $request->price,
+            'image' => $filename
+
+        ]);
+
         return redirect()->route('adminpage.detailuser.admindetailuser');
+
     }
 
     public function delete($id){

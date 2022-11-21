@@ -47,7 +47,7 @@ class UserController extends Controller
          User::create($request->all());
          return redirect()->route('adminpage.user.adminuser');
     }
-    
+
 
     public function add()
     {
@@ -64,14 +64,41 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
-        $user = User::find($id);
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->save();
-        return redirect()->route('adminpage.user.adminuser');
-    }
 
-    public function delete($id){ 
+        $product = User::find($id);
+
+        $request->validate([
+
+            'name' => 'nullable',
+            'detail' => 'nullable',
+
+        ]);
+
+        if( $request->file('image') ){
+
+            $file = $request->file('image');
+            $filename = date('YmdHi') . '_' . $file->getClientOriginalName();
+            $file->move( public_path('user'), $filename );
+
+        }else{
+
+            $filename = $product->image;
+
+        }
+
+        $product->update([
+
+            'name' => $request->name,
+            'detail' => $request->detail,
+            'price' => $request->price,
+            'image' => $filename
+
+        ]);
+
+        return redirect()->route('adminpage.user.adminuser');
+
+    }
+    public function delete($id){
         $user= User::find($id);
         $user->delete();
         return redirect()->route('adminpage.user.adminuser');
