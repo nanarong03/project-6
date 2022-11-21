@@ -48,10 +48,10 @@ div {
 <form action="{{ route('adminpage.user.add') }}"method="POST"class="forms-sample">
   @csrf
     <label for="fname">Username</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your Username.."name="name">
+    <input type="text" id="fname" name="username" placeholder="Your Username..">
 
     <label for="lname">Email</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Email.."name="name">
+    <input type="text" id="lname" name="email" placeholder="Your Email..">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">

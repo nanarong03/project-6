@@ -91,7 +91,7 @@ image{
                           <tr>
                             <th>#</th>
                             <th><div>Name</div></th>
-                            <th><div>Details</div></th>
+                            <th><div>Detail</div></th>
                             <th><div>Price</div></th>
                             <th><div>Image</div></th>
                             <th><div>Edit</div></th>
@@ -101,16 +101,20 @@ image{
                         <tbody>
                           @foreach($products as $row)
                           <tr class="table table-bordered">
-                            <td>{{ $row ->id}}</td>
-                            <td>{{ $row ->name}}</td>
-                            <td>{{ $row ->details}}</td>
-                            <td>{{ $row ->price}}</td>
-                            <td>{{ $row ->image}}</td>
+                            <td>{{$row->id}}</td>
+                            <td>{{$row->name}}</td>
+                            <td>{{$row->detail}}</td>
+                            <td>{{$row->price}}</td>
+                            <td>
+                              @if( !empty($row->image) ) 
+                              <img src="{{ asset('product') . '/' . $row->image }}" alt="">
+                              @else
+                              {{ __('ไม่มีรูป') }}
+                              @endif
+                            </td>
 
-                            <td><a href="{{url('admin/product/edit')}}">
-                              <button class="">Edit</button></a></td>
-                              <form><td><button type="delete" class="delete">
-                                Delete</button></td></form>
+                            <td><a href="{{url('/admin/product/edit/'.$row->id)}}"><button  class="edit" >edit</button></td></a>
+                            <td><a href="{{url('/admin/product/delete/'.$row->id)}}"><button  class="delete" >Delete</button></td></a>
                           </tr>
                           @endforeach
                           </tr>

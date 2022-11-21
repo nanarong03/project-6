@@ -18,8 +18,8 @@ cursor: pointer;
 }
 
 .button1 {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid black;
 }
 
@@ -29,8 +29,8 @@ cursor: pointer;
 }
 
 .button2 {
-  background-color: whitesmoke; 
-  color: black; 
+  background-color: whitesmoke;
+  color: black;
   border: 2px solid black;
 }
 
@@ -73,25 +73,26 @@ image{
 
 
 
-        
+
         <div class="main-panel">
           <div class="content-wrapper pb-0">
             <div class="page-header flex-wrap">
-             
+
             <div class="content-wrapper">
             <div class="row">
               <div class="col-lg-12 stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">ตารางข้อมูลลูกค้า <td> <a href="{{url('admin/detailuser/add')}}" class="button-success">เพิ่มข้อมูล</button></a></td> </h4>
-                    
+
                     <div class="table-responsive">
                       <table class="table table-bordered">
                         <thead>
                           <tr>
                             <th>#</th>
                             <th><div>Name contact</div></th>
-                            <th><div>Details contact</div></th>
+                            <th><div>Detail contact</div></th>
+                            <th><div>Image</div></th>
                             <th><div>Image</div></th>
                             <th><div>Edit</div></th>
                             <th><div>Delete</div></th>
@@ -100,15 +101,20 @@ image{
                         <tbody>
                         @foreach($detailuser as $row)
                           <tr class="table table-bordered">
-                            <td>{{ $row ->id}}</td>
-                            <td>{{ $row ->name}}</td>
-                            <td>{{ $row ->details}}</td>
-                            <td>{{ $row ->image}}</td>
+                            <td>{{$row ->id}}</td>
+                            <td>{{$row ->name}}</td>
+                            <td>{{$row ->detail}}</td>
+                            <td>{{$row ->image}}</td>
+                            <td>
+                                @if( !empty($row->image) )
+                                <img src="{{ asset('detailuser') . '/' . $row->image }}" alt="">
+                                @else
+                                {{ __('ไม่มีรูป') }}
+                                @endif
+                              </td>
 
-                            <td><a href="{{url('admin/detailuser/edit')}}">
-                              <button class="">Edit</button></a></td>
-                              <form><td><button type="delete" class="delete">
-                                Delete</button></td></form>
+                            <td><a href="{{url('/admin/detailuser/edit/'.$row->id)}}"><button  class="edit" >edit</button></td></a>
+                              <td><a href="{{url('/admin/detailuser/delete/'.$row->id)}}"><button  class="delete" >Delete</button></td></a>
                           </tr>
                           @endforeach
                           </tr>
@@ -121,17 +127,17 @@ image{
             </div>
           </div>
             </div>
-            
+
             <div class="row">
-              
+
               <div class="col-xl-4 col-md-6 grid-margin stretch-card">
                 <!--datepicker-->
-                
+
                 <!--datepicker ends-->
               </div>
               <div class="col-xl-4 col-md-6 stretch-card grid-margin stretch-card">
                 <!--browser stats-->
-               
+
                 <!--browser stats ends-->
               </div>
             </div>

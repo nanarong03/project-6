@@ -12,7 +12,7 @@ class Detailuser extends Model
     protected $table ='detailuser';
     protected $fillable =[
         'name',
-        'details',
+        'detail',
         'image',
         'created_by',
         'updated_by',

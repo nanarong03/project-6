@@ -45,18 +45,19 @@ div {
 <div>
 <div>
 <h2>แก้ไขข้อมูล</h2>
-  <form action="/action_page.php">
-    <label for="fname">Name Product</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  <form action="{{ url('/admin/product/update/'.$products->id) }}"method="POST" enctype="multipart/form-data">
+    @csrf
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="name" value="{{$products->name}}" placeholder="Edit your name..">
 
-    <label for="lname">Details</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your details..">
+    <label for="lname">Detail</label>
+    <input type="text" id="lname" name="detail" value="{{$products->detail}}" placeholder="Edit your details..">
 
     <label for="lname">Price</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your price..">
+    <input type="text" id="lname" name="price" value="{{$products->price}}" placeholder="Edit your price..">
 
     <label for="lname">Image</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your image..">
+    <input type="file" id="lname" name="image"value="{{$products->image}}" placeholder="Edit your image..">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">
@@ -64,7 +65,7 @@ div {
       <option value="canada">Canada</option>
       <option value="usa">USA</option>
     </select> -->
-  
+
     <input type="submit" value="Submit">
   </form>
 </div>

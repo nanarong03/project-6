@@ -34,17 +34,36 @@ class NewandeventController extends Controller
          return view('adminpage.newandevent.add');
     }
 
-    public function addform(Request $request)
+    public function create(Request $request)
     {
         //C2 ->create
          $request ->validate([
             //'picture'=>null',
             'name'=> 'nullable',
             'detail'=> 'nullable',
-            'image'=> 'nullable',
          ]);
 
-         Newandevent::create($request->all());
+         if($request->file('image')){
+
+            $file = $request->file('image');
+            $filename = date('YmdHi'). '_' .$file->getClientOriginalName();
+            $file->move(public_path('newandevent'), $filename);
+
+         }else{
+
+            $filename =NULL;
+
+         }
+
+         Newandevent::create([
+
+            'name' => $request->name,
+            'detail' => $request->detail,
+            'price' => $request->price,
+            'image' => $filename,
+
+         ]);
+
          return redirect()->route('adminpage.newandevent.adminnewandevent');
     }
 
@@ -55,9 +74,25 @@ class NewandeventController extends Controller
     }
 
 
-    public function edit()
+    public function edit($id)
     {
-        // return view('edit');
-         return view('adminpage.newandevent.edit');
+        $newandevent = Newandevent::find($id);
+        return view('adminpage.newandevent.edit',compact('newandevent'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $newandevent = Newandevent::find($id);
+        $newandevent->name = $request->name;
+        $newandevent->detail = $request->detail;
+        $newandevent->image = $request->image;
+        $newandevent->save();
+        return redirect()->route('adminpage.newandevent.adminnewandevent');
+    }
+
+    public function delete($id){
+        $newandevent= Newandevent::find($id);
+        $newandevent->delete();
+        return redirect()->route('adminpage.newandevent.adminnewandevent');
     }
 }

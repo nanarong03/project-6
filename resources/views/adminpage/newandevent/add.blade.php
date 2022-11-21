@@ -45,16 +45,16 @@ div {
 <div>
 <div>
 <h2>เพิ่มข้อมูล</h2>
-<form action="{{ route('adminpage.newandevent.add') }}"method="POST"class="forms-sample">
+<form action="{{ route('adminpage.newandevent.create') }}"method="post" enctype="multipart/form-data">
   @csrf
     <label for="fname">New name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Add your new name.."name="name">
+    <input type="text" id="fname" name="name" placeholder="Add your new name..">
 
-    <label for="lname">New details</label>
-    <input type="text" id="lname" name="lastname" placeholder="Add your new Details.."name="name">
+    <label for="lname">New detail</label>
+    <input type="text" id="lname" name="detail" placeholder="Add your new Detail..">
 
     <label for="lname">New image</label>
-    <input type="text" id="lname" name="lastname" placeholder="Add your new image.."name="name">
+    <input type="file" id="lname" name="image" placeholder="Add your new image..">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">
@@ -62,7 +62,7 @@ div {
       <option value="canada">Canada</option>
       <option value="usa">USA</option>
     </select> -->
-  
+
     <input type="submit" value="Submit">
   </form>
 </div>

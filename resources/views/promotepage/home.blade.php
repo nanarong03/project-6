@@ -180,21 +180,22 @@
     <div class="row justify-content-center">
       <!-- course item -->
       <div class="col-lg-4 col-sm-6 mb-5">
+      @foreach($products as $row)
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('template/promote/images/courses/belt.jpg') }}" alt="course thumb">
+          <img class="card-img-top rounded-0" src="{{ asset('admin/upload/present/' .$row->picture )}}" alt="course thumb">
           <div class="card-body">
             <ul class="list-inline mb-2">
               <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>
             </ul>
             <a href="course-single.html">
-              <h4 class="card-title">ชื่อสินค้า - ประเภท</h4>
+              <h4 class="card-title">{{$row->name}}</h4>
             </a>
-            <p class="card-text mb-4"> ราคา</p>
+            <p class="card-text mb-4">{{$row->price}}</p>
           </div>
         </div>
       </div>
       <!-- course item -->
-      <div class="col-lg-4 col-sm-6 mb-5">
+      <!-- <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0" src="{{ asset('template/promote/images/courses/belt-2.jfif') }}" alt="course thumb">
           <div class="card-body">
@@ -207,9 +208,9 @@
             <p class="card-text mb-4"> ราคา</p>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- course item -->
-      <div class="col-lg-4 col-sm-6 mb-5">
+      <!-- <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
           <img class="card-img-top rounded-0" src="{{ asset('template/promote/images/courses/belt-3.jpg') }}" alt="course thumb">
           <div class="card-body">
@@ -222,13 +223,14 @@
             <p class="card-text mb-4"> ราคา</p>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- mobile see all button -->
       <div class="row">
         <div class="col-12 text-center">
           <a href="courses.html" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">sell all</a>
         </div>
       </div>
+      @endforeach
     </div>
 </section>
 <!-- /courses -->

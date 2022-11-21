@@ -1,12 +1,12 @@
 <div class="container-scroller">
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
-          <a class="sidebar-brand brand-logo" href="index.php"><img src="{{ asset('template/admin/assets/images/logo.svg') }} " alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="index.php"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="{{ url('/admin/home') }}"><img src="{{ asset('template/admin/assets/images/logo.svg') }} " alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="{{ url('/admin/home') }}"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item nav-profile">
-            <a href="index.php" class="nav-link">
+            <a href="{{ url('/admin/home') }}" class="nav-link">
               <div class="nav-profile-image">
                 <img src="{{ asset('template/admin/assets/images/faces/face1.jpg') }}" alt="profile" />
                 <span class="login-status online"></span>
@@ -68,7 +68,7 @@
             </span>
           </li> -->
           <!-- li class="nav-item" -->
-          
+
             <!-- <a class="nav-link" href="https://www.bootstrapdash.com/demo/breeze-free/documentation/documentation.html">
               <i class="mdi mdi-file-document-box menu-icon"></i>
               <span class="menu-title">Documentation</span>
@@ -87,9 +87,9 @@
                 </ul>
               </div>
             </div>
-             </li>  --> 
+             </li>  -->
 
-             
+
              <li class="nav-item">
             <a class="nav-link" href="{{ url('/admin/product') }}">
               <i class="mdi mdi-cart menu-icon"></i>
@@ -216,7 +216,7 @@
                 </form>
               </li>
             </ul>
-      
+
             <ul class="navbar-nav navbar-nav-right ml-lg-auto">
               <li class="nav-item dropdown d-none d-xl-flex border-0">
               </li>
@@ -225,17 +225,17 @@
                   <img class="nav-profile-img mr-2" alt="" src="{{ asset('template/admin/assets/images/faces/face10.jpg') }}" />
                   <span class="profile-name">{{ Auth::user()->name }}</span>
                 </a>
-                <div class="dropdown-menu navbar-dropdown w-100" aria-labelledby="profileDropdown">
+                <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
                   <a class="dropdown-item" href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">
-              
-                    <i class="mdi mdi-logout mr-2 text-primary"></i>{{ __('Logout') }}</a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    <i class="mdi mdi-logout  text-primary"></i>{{('Logout')}}</a>
+
+                    <form id="logout-form" action="{{route('logout') }}" method="POST" class="d-none">
                                         @csrf
                        </form>
-                    
+
                   <!-- <a class="dropdown-item" href="#">
                     <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a> -->
                 </div>
@@ -246,4 +246,3 @@
             </button>
           </div>
         </nav>
-      

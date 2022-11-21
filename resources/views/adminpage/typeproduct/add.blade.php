@@ -45,13 +45,13 @@ div {
 <div>
 <div>
 <h2>เพิ่มข้อมูล</h2>
-<form action="{{ route('adminpage.typeproduct.add') }}"method="POST"class="forms-sample">
+<form action="{{ route('adminpage.typeproduct.create') }}"method="post" enctype="multipart/form-data">
   @csrf
     <label for="fname">Typeproduct name</label>
-    <input type="text" id="fname" name="Typeproduct name" placeholder="Add your Typeproduct name.."name="name">
+    <input type="text" id="fname" name="name" placeholder="Add your Typeproduct name..">
 
     <label for="lname">Image</label>
-    <input type="text" id="lname" name="lastname" placeholder="Add your Image.."name="name">
+    <input type="file" id="lname" name="image" placeholder="Add your Image..">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">
@@ -59,7 +59,7 @@ div {
       <option value="canada">Canada</option>
       <option value="usa">USA</option>
     </select> -->
-  
+
     <input type="submit" value="Submit">
   </form>
 </div>

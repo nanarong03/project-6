@@ -34,7 +34,7 @@ class DetailuserController extends Controller
          return view('adminpage.detailuser.add');
     }
 
-    public function addform(Request $request)
+    public function create(Request $request)
     {
         //C2 ->create
          $request ->validate([
@@ -44,7 +44,27 @@ class DetailuserController extends Controller
             'image'=> 'nullable',
          ]);
 
-         Detailuser::create($request->all());
+         if($request->file('image')){
+
+            $file = $request->file('image');
+            $filename = date('YmdHi'). '_' .$file->getClientOriginalName();
+            $file->move(public_path('detailuser'), $filename);
+
+         }else{
+
+            $filename =NULL;
+
+         }
+
+         Detailuser::create([
+
+            'name' => $request->name,
+            'detail' => $request->detail,
+            'price' => $request->price,
+            'image' => $filename,
+
+         ]);
+
          return redirect()->route('adminpage.detailuser.admindetailuser');
     }
 
@@ -55,9 +75,25 @@ class DetailuserController extends Controller
     }
 
 
-    public function edit()
+    public function edit($id)
     {
-        // return view('edit');
-         return view('adminpage.detailuser.edit');
+        $detailuser = detailuser::find($id);
+        return view('adminpage.detailuser.edit',compact('detailuser'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $detailuser = detailuser::find($id);
+        $detailuser->name = $request->name;
+        $detailuser->detail = $request->detail;
+        $detailuser->image = $request->image;
+        $detailuser->save();
+        return redirect()->route('adminpage.detailuser.admindetailuser');
+    }
+
+    public function delete($id){
+        $detailuser= Detailuser::find($id);
+        $detailuser->delete();
+        return redirect()->route('adminpage.detailuser.admindetailuser');
     }
 }

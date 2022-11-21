@@ -45,12 +45,13 @@ div {
 <div>
 <div>
 <h2>แก้ไขข้อมูล</h2>
-  <form action="/action_page.php">
+<form action="{{ url('/admin/user/update/'.$user->id) }}" method="POST" enctype="multipart/form-data">
+  @csrf
   <label for="fname">Username</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your Username..">
+    <input type="text" id="fname" name="username" value="{{$user->username}}" placeholder="Edit your username..">
 
     <label for="lname">Email</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Email..">
+    <input type="text" id="lname" name="email" value="{{$user->email}}" placeholder="Edit your email..">
     
     <!-- <label for="country">Country</label>
     <select id="country" name="country">

@@ -12,7 +12,7 @@ class Newandevent extends Model
     protected $table ='newandevent';
     protected $fillable =[
         'name',
-        'details',
+        'detail',
         'image',
         'created_by',
         'updated_by',

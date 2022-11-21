@@ -12,7 +12,7 @@ class Typeproduct extends Model
     protected $table ='type_product';
     protected $fillable =[
         'name',
-        'iamge',
+        'image',
         'created_by',
         'updated_by',
     ];

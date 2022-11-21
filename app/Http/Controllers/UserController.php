@@ -24,7 +24,7 @@ class UserController extends Controller
     public function index()
     {
         //R read
-        $user = user::all();
+        $user = User::all();
         return view('adminpage.user.adminuser' , compact('user'));
     }
 
@@ -56,9 +56,24 @@ class UserController extends Controller
     }
 
 
-    public function edit()
+    public function edit($id)
     {
-        // return view('edit');
-         return view('adminpage.user.edit');
+        $user = User::find($id);
+        return view('adminpage.user.edit',compact('user'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $user = User::find($id);
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->save();
+        return redirect()->route('adminpage.user.adminuser');
+    }
+
+    public function delete($id){ 
+        $user= User::find($id);
+        $user->delete();
+        return redirect()->route('adminpage.user.adminuser');
     }
 }

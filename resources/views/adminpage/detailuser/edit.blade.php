@@ -45,18 +45,16 @@ div {
 <div>
 <div>
 <h2>แก้ไขข้อมูล</h2>
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<form action="{{ url('/admin/detailuser/update/'.$detailuser->id) }}" method="POST" enctype="multipart/form-data">
+@csrf
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="name" value="{{$products->name}}" placeholder="Edit your name..">
 
-    <label for="lname">Product</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Product..">
+    <label for="lname">Detail</label>
+    <input type="text" id="lname" name="detail" value="{{$products->detail}}" placeholder="Edit your details..">
 
-    <label for="lname">Amount</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Amount..">
-
-    <label for="lname">Deadline</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Deadline..">
+    <label for="lname">Image</label>
+    <input type="file" id="lname" name="image"value="{{$products->image}}" placeholder="Edit your image..">
 
     <!-- <label for="country">Country</label>
     <select id="country" name="country">

@@ -103,10 +103,9 @@ image{
                             <td>{{ $row ->username}}</td>
                             <td>{{ $row ->email}}</td>
 
-                            <td><a href="{{url('admin/user/edit')}}">
-                              <button class="">Edit</button></a></td>
-                              <form><td><button type="delete" class="delete">
-                                Delete</button></td></form>
+                            
+                            <td><a href="{{url('/admin/user/edit/'.$row->id)}}"><button  class="edit" >edit</button></td></a>
+                            <td><a href="{{url('/admin/user/delete/'.$row->id)}}"><button  class="delete" >Delete</button></td></a>
                           </tr>
                           @endforeach
                           </tr>

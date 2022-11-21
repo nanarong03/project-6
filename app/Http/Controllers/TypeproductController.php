@@ -34,16 +34,37 @@ class TypeProductController extends Controller
          return view('adminpage.typeproduct.add');
     }
 
-    public function addform(Request $request)
+    public function create(Request $request)
     {
         //C2 ->create
          $request ->validate([
             //'picture'=>null',
             'name'=> 'nullable',
-            'image'=> 'nullable',
          ]);
 
-         Typeproduct::create($request->all());
+         if($request->file('image')){
+
+            $file = $request->file('image');
+            $filename = date('YmdHi'). '_' .$file->getClientOriginalName();
+            $file->move(public_path('typeproduct'), $filename);
+
+         }else{
+
+            $filename =NULL;
+
+         }
+
+         Typeproduct::create([
+
+            'name' => $request->name,
+            'detail' => $request->detail,
+            'price' => $request->price,
+            'image' => $filename,
+
+         ]);
+
+
+
          return redirect()->route('adminpage.typeproduct.admintypeproduct');
     }
 
@@ -54,10 +75,26 @@ class TypeProductController extends Controller
     }
 
 
-    public function edit()
+    public function edit($id)
     {
-        // return view('edit');
-         return view('adminpage.typeproduct.edit');
+        $Typeproduct = Typeproduct::find($id);
+        return view('adminpage.typeproduct.edit',compact('Typeproduct'));
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        $Typeproduct = Typeproduct::find($id);
+        $Typeproduct->name = $request->name;
+        $Typeproduct->image = $request->image;
+        $Typeproduct->save();
+        return redirect()->route('adminpage.typeproduct.admintypeproduct');
+    }
+
+    public function delete($id){
+        $Typeproduct= Typeproduct::find($id);
+        $Typeproduct->delete();
+        return redirect()->route('adminpage.typeproduct.admintypeproduct');
     }
 }
 
