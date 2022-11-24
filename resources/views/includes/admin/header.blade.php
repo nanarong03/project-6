@@ -1,7 +1,8 @@
 <div class="container-scroller">
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
-          <a class="sidebar-brand brand-logo" href="{{ url('/admin/home') }}"><img src="{{ asset('template/admin/assets/images/logo.svg') }} " alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="{{ url('/admin/home') }}"><img class="img-fluid mb-4" src="{{ asset('template/promote/images/belt.png') }}" alt="logo"
+            width=250px></a>
           <a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="{{ url('/admin/home') }}"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav"><br>

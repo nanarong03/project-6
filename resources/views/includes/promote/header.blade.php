@@ -42,7 +42,7 @@
                 ข้อมูลสินค้า
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{url('/product')}}">สินค้า</a>
+                <a class="dropdown-item" href="{{url('/products')}}">สินค้า</a>
                 <a class="dropdown-item" href="{{url('/teacher-single')}}">สินค้าเเนะนำ</a>
           <!--  <a class="dropdown-item" href="notice.php">Notice</a>
                 <a class="dropdown-item" href="notice-single.php">Notice Details</a>
@@ -66,3 +66,4 @@
   </div>
 </header>
 <!-- /header -->
+

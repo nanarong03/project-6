@@ -174,7 +174,7 @@
           <h2 class="mb-0 text-nowrap mr-3">สินค้าเเนะนำ</h2>
           <div class="border-top w-100 border-primary d-none d-sm-block"></div>
           <div>
-            <a href="product.php" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">ดูสินค้า</a>
+
           </div>
         </div>
       </div>
@@ -185,10 +185,10 @@
       <div class="col-lg-4 col-sm-6 mb-5">
       @foreach($products as $row)
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('admin/upload/present/' .$row->picture )}}" alt="course thumb">
+          <img class="img-fluid w-100" src="{{ asset('product'. '/' .$row->image )}}" alt="course thumb">
           <div class="card-body">
             <ul class="list-inline mb-2">
-              <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>
+              <li class="list-inline-item"><a class="text-color" href="#">สินค้า</a></li>
             </ul>
             <a href="course-single.html">
               <h4 class="card-title">{{$row->name}}</h4>
@@ -200,7 +200,7 @@
       <!-- course item -->
       <!-- <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('template/promote/images/courses/belt-2.jfif') }}" alt="course thumb">
+          {{-- <img class="card-img-top rounded-0" src="{{ asset('template/promote/images/courses/belt-2.jfif') }}" alt="course thumb"> --}}
           <div class="card-body">
             <ul class="list-inline mb-2">
               <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>
@@ -215,7 +215,7 @@
       <!-- course item -->
       <!-- <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-          <img class="card-img-top rounded-0" src="{{ asset('template/promote/images/courses/belt-3.jpg') }}" alt="course thumb">
+          {{-- <img class="card-img-top rounded-0" src="{{ asset('template/promote/images/courses/belt-3.jpg') }}" alt="course thumb"> --}}
           <div class="card-body">
             <ul class="list-inline mb-2">
               <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>

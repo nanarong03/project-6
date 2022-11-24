@@ -103,7 +103,7 @@ image{
                           <tr class="table table-bordered">
                             <td>{{ $row ->id}}</td>
                             <td>{{ $row ->name}}</td>
-                            <td>{{ $row ->details}}</td>
+                            <td>{{ $row ->detail}}</td>
                             <td>{{ $row ->image}}</td>
                             <td>
                                 @if( !empty($row->image) )

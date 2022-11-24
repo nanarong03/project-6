@@ -86,7 +86,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <img class="img-fluid w-100 mb-4" src="{{asset('template/promote/images/about/storefront.jpg')}}"about image">
+        <img class="img-fluid w-100 mb-4" src="{{asset('template/promote/images/about/storefront.jpg')}}">
         <h2 class="section-title">BB belt shop</h2>
         <p>กิจกรรมของร้านจะจัดทุกเทศกาล</p>
       </div>
@@ -101,16 +101,18 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-sm-4 position-relative success-video">
-      </div>
+        <div class="col-md-12 mb-6">
+            <img class="img-fluid w-75" src="{{asset('template/promote/images/events/events.jpg')}}" alt="teacher">
+        </div>
+    </div>
       <div class="col-lg-6 col-sm-8">
         <div class="bg-white p-5">
           <h2 class="section-title">กิจกรรมที่จัดอยู่ตอนนี้</h2>
-          <p>เนื่องด้วยครบรอบ...ปีของร้าน</p>
-          <p>โดยจะมีการจับฉลากแจกของขวัญต่าง ๆมากมาย</p>
+          <p>เนื่องด้วยครบรอบปีของร้าน</p>
+          <p>โดยจะมีการจับฉลากแจกของขวัญต่าง ๆ มากมาย</p>
         </div>
       </div>
     </div>
-  </div>
 </section>
 <!-- /success story -->
 

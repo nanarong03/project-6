@@ -18,8 +18,8 @@ cursor: pointer;
 }
 
 .button1 {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid black;
 }
 
@@ -29,8 +29,8 @@ cursor: pointer;
 }
 
 .button2 {
-  background-color: whitesmoke; 
-  color: black; 
+  background-color: whitesmoke;
+  color: black;
   border: 2px solid black;
 }
 
@@ -73,17 +73,17 @@ image{
 
 
 
-        
+
         <div class="main-panel">
           <div class="content-wrapper pb-0">
             <div class="page-header flex-wrap">
               <h2 class="mb-0"> ยินดีต้อน! <span class="pl-0 h6 pl-sm-2 text-muted d-inline-block">เข้าสู่เว็บไซต์ของเรา</span>
               </h2>
               <div class="d-flex">
-                
+
                   <i></i><a href="login.php" class="button button2 btn-sm ml-1">เข้าสู่ระบบ</button></a>
-                  
-                  
+
+
                   <i></i><a href="register.php" class="button button2 btn-sm ml-1">สมัครสมาชิก</button></a>
               </div>
             </div>
@@ -161,14 +161,14 @@ image{
                     </div>
 
                       <h5>ความรู้เกี่ยวกับยี่ห้อต่าง ๆ</h5>
-                        <p class="text-muted"> 
-                        Gucci จากอิตาลี ที่ครองใจสายแฟชั่นมาโดยตลอด กับหัวเข็มขัดสัญลักษณ์ Double G (GG) 
-                        ที่ได้รับความนิยมสูง โดยส่วนใหญ่แล้วจะใช้วัสดุที่ทำมาจากหนังวัวและหนังจระเข้ ซึ่งจะให้ลุคที่ดูหรูหรามีระดับ 
+                        <p class="text-muted">
+                        Gucci จากอิตาลี ที่ครองใจสายแฟชั่นมาโดยตลอด กับหัวเข็มขัดสัญลักษณ์ Double G (GG)
+                        ที่ได้รับความนิยมสูง โดยส่วนใหญ่แล้วจะใช้วัสดุที่ทำมาจากหนังวัวและหนังจระเข้ ซึ่งจะให้ลุคที่ดูหรูหรามีระดับ
                         สำหรับเข็มขัดหนังของผู้ชายจะเน้นความเรียบหรู ดูคลาสสิก  ส่วนของผู้หญิงจะเน้นไปทางดีไซน์แฟชั่น มีลวดลาย สีสันที่หลากหลายกว่า
-                        CK (Calvin Klein) CK (Calvin Klein) ก็มีเข็มขัดหนังแท้ที่ดีไซน์หัวเข็มขัดสัญลักษณ์ 
+                        CK (Calvin Klein) CK (Calvin Klein) ก็มีเข็มขัดหนังแท้ที่ดีไซน์หัวเข็มขัดสัญลักษณ์
                         CK ถูกใจสไตล์คนรุ่นใหม่ เหมาะกับลุค Casual สร้างความสะดุดตามากขึ้น Lacoste
-                        Lacoste ที่โดดเด่นในเรื่องการใช้หนังมาผลิตเป็นเครื่องประดับต่าง ๆ ทั้งเข็มขัด กระเป๋าสตางค์และรองเท้า 
-                        ซึ่งเครื่องหนังมีอายุการใช้งานยาวนาน ทนทาน ยิ่งใช้นานหนังก็จะยิ่งขึ้นเงา ช่วยเสริมลุคทางการหรือใส่ในชีวิตประจำวันให้ดูดีขึ้นได้ 
+                        Lacoste ที่โดดเด่นในเรื่องการใช้หนังมาผลิตเป็นเครื่องประดับต่าง ๆ ทั้งเข็มขัด กระเป๋าสตางค์และรองเท้า
+                        ซึ่งเครื่องหนังมีอายุการใช้งานยาวนาน ทนทาน ยิ่งใช้นานหนังก็จะยิ่งขึ้นเงา ช่วยเสริมลุคทางการหรือใส่ในชีวิตประจำวันให้ดูดีขึ้นได้
                         มีหัวเข็มขัดโลหะสลักลายจระเข้ตัวล็อกแบบอัตโนมัติ สวมใส่ง่ายและเพิ่มความสุขุมมากขึ้น <a class="text-muted font-weight-medium pl-2" href="#"><u>See Details</u></a>
                         </p>
                       </div>
@@ -209,7 +209,7 @@ image{
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4 col-sm-6 grid-margin stretch-card">              
+              <div class="col-xl-4 col-sm-6 grid-margin stretch-card">
             </div>
           </div>
 
@@ -226,12 +226,12 @@ image{
                   </div>
                 </div>
               </div>
-            
+
 
               <div class="col-xl-4 grid-margin stretch-card">
               </div>
 
-              
+
               <div class="col-xl-4 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
@@ -246,22 +246,22 @@ image{
             </div>
 
 
-          
+
             <div class="row">
               <div class="col-xl-4 grid-margin stretch-card">
                   <div class="card-body">
-                    <img src="assets/images/dashboard/belt.1.jpg"  style="width:325px; height:325px;" >
+                    <img class="card-img-top rounded-0" src="{{asset('template/promote/images/courses/belt.jpg')}}" alt="course thumb">
                     <div class="list-wrapper">
                       <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
                       </ul>
                     </div>
                   </div>
               </div>
-              
+
 
               <div class="col-xl-4 grid-margin stretch-card">
                   <div class="card-body">
-                  <img src="assets/images/dashboard/belt.2.jpg"  style="width:325px; height:325px;">
+                    <img class="card-img-top rounded-0" src="{{asset('template/promote/images/courses/belt-2.jfif')}}" alt="course thumb">
                     <div class="list-wrapper">
                       <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
                       </ul>
@@ -272,7 +272,7 @@ image{
 
               <div class="col-xl-4 grid-margin stretch-card">
                 <div class="card-body">
-                  <img src="assets/images/dashboard/belt.3.jpg" style="width:325px; height:325px;">
+                    <img class="card-img-top rounded-0" src="{{asset('template/promote/images/courses/belt-3.jpg')}}" alt="course thumb">
                     <div class="list-wrapper">
                       <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
                       </ul>
@@ -298,7 +298,7 @@ image{
                         <p1 class="text-white m-0 text-right">ที่เริ่มต้นจากการใช้เก็บสิ่งของ<br>
                         บันทึกเกี่ยวกับการใช้เข็มขัดของมนุษย์ <br>
                         เริ่มต้นในช่วงยุคสำริดเมื่อ 5 – 3<br>
-                        พันปีก่อน ในฐานะของที่ผู้ชายสวมใส่ก่อน<br> 
+                        พันปีก่อน ในฐานะของที่ผู้ชายสวมใส่ก่อน<br>
                         หลังจากนั้นเมื่อเทรนด์แฟชั่นของมนุษย์<br>
                         เปลี่ยนไปตามกาลเวลา<br>
                         ก็ปรากฏหลักฐานว่าผู้เองก็ใส่เข็มขัดด้วย
@@ -310,20 +310,20 @@ image{
             </div>
               <div class="col-xl-4 grid-margin stretch-card">
                 <!--activity-->
-              
+
                 <!--activity ends-->
               </div>
             </div>
             <div class="row">
-              
+
               <div class="col-xl-4 col-md-6 grid-margin stretch-card">
                 <!--datepicker-->
-                
+
                 <!--datepicker ends-->
               </div>
               <div class="col-xl-4 col-md-6 stretch-card grid-margin stretch-card">
                 <!--browser stats-->
-               
+
                 <!--browser stats ends-->
               </div>
             </div>

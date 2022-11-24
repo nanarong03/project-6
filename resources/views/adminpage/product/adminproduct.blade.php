@@ -18,8 +18,8 @@ cursor: pointer;
 }
 
 .button1 {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid black;
 }
 
@@ -29,8 +29,8 @@ cursor: pointer;
 }
 
 .button2 {
-  background-color: whitesmoke; 
-  color: black; 
+  background-color: whitesmoke;
+  color: black;
   border: 2px solid black;
 }
 
@@ -73,18 +73,18 @@ image{
 
 
 
-        
+
         <div class="main-panel">
           <div class="content-wrapper pb-0">
             <div class="page-header flex-wrap">
-             
+
             <div class="content-wrapper">
             <div class="row">
               <div class="col-lg-12 stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">ตารางสินค้า  <td> <a href="{{url('admin/product/add')}}" class="button-success">เพิ่มข้อมูล</button></a></td> </h4>
-                    
+
                     <div class="table-responsive">
                       <table class="table table-bordered">
                         <thead>
@@ -106,7 +106,7 @@ image{
                             <td>{{$row->detail}}</td>
                             <td>{{$row->price}}</td>
                             <td>
-                              @if( !empty($row->image) ) 
+                              @if( !empty($row->image) )
                               <img src="{{ asset('product') . '/' . $row->image }}" alt="">
                               @else
                               {{ __('ไม่มีรูป') }}
@@ -127,17 +127,17 @@ image{
             </div>
           </div>
             </div>
-            
+
             <div class="row">
-              
+
               <div class="col-xl-4 col-md-6 grid-margin stretch-card">
                 <!--datepicker-->
-                
+
                 <!--datepicker ends-->
               </div>
               <div class="col-xl-4 col-md-6 stretch-card grid-margin stretch-card">
                 <!--browser stats-->
-               
+
                 <!--browser stats ends-->
               </div>
             </div>

@@ -31,7 +31,7 @@ use App\Http\Controllers\UserController;
 
 Route::view('/','promotepage.home')->name('home');
 Route::view('/house-blend', 'promotepage.house-blend')->name('house-blend');
-Route::view('/product', 'promotepage.product',)->name('product');
+Route::view('/products', 'promotepage.product',)->name('product');
 Route::view('/teacher-single', 'promotepage.teacher-single',)->name('teacher-single');
 Route::view('/about', 'promotepage.about',)->name('about');
 Route::view('/contact', 'promotepage.contact',)->name('contact');

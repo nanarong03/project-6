@@ -71,7 +71,7 @@
     <div class="row">
       <div class="col-md-8">
         <ul class="list-inline custom-breadcrumb">
-          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="product.php">ข้อมูลสินค้า</a></li>
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="./product">ข้อมูลสินค้า</a></li>
           <li class="list-inline-item text-white h3 font-secondary nasted">สินค้าเเนะนำ</li>
         </ul>
         <p class="text-lighten">สินค้าที่ลดราคามากสุดในร้าน</p>

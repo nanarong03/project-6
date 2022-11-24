@@ -88,7 +88,6 @@
       <div class="col-12">
         <!-- teacher category list -->
         <ul class="list-inline text-center filter-controls mb-5">
-          <li class="list-inline-item m-3 text-uppercase" data-filter=".arts">ทั้งหมด</li>
           <li class="list-inline-item m-3 text-uppercase" data-filter=".bio-science">เขียมขัด</li>
           <li class="list-inline-item m-3 text-uppercase" data-filter=".business-study">กระเป๋าตัง</li>
           <li class="list-inline-item m-3 text-uppercase" data-filter=".law">ผ้าเช็ดหน้า</li>

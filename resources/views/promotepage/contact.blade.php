@@ -99,10 +99,7 @@
         <a href="tel:+6609-0945-7900" class="text-color h5 d-block">+6609-0945-7900</a>
         <a href="mailto:tae0972126801@gmail.com" class="mb-5 text-color h5 d-block">tae0972126801@gmail.com</a>
       </div>
-        </form>
-      </div>
-    </div>
-  </div>
+    </form>
 </section>
 <!-- /contact -->
 
