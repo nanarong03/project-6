@@ -14,13 +14,15 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ asset('template/promote/css/style.css') }}">
-  
+
   <!--Favicon-->
   <link rel="shortcut icon" href="{{ asset('template/promote/images/favicon.ico') }}" type="image/x-icon">
   <link rel="icon" href="{{ asset('template/promote/images/favicon.ico') }}" type="image/x-icon">
 
-
-
+<!--Font google-->
+{{-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr&family=Secular+One&display=swap" rel="stylesheet"> --}}
 
 
   <script src="{{ asset('template/promote/plugins/jQuery/jquery.min.js') }}"></script>
@@ -42,7 +44,7 @@
 <!-- Main Script -->
 <script src="{{ asset('template/promote/js/script.js') }}"></script>
 
-  
+
 
 
 
