@@ -128,7 +128,6 @@
               <h4 class="card-title">ชื่อสินค้า - ประเภท</h4>
             </a>
             <p class="card-text mb-4">ราคา</p>
-            <a href="product.php" class="btn btn-primary btn-sm">ดูสินเพิ่มเติม</a>
           </div>
         </div>
       </div>
@@ -144,7 +143,6 @@
               <h4 class="card-title">ชื่อสินค้า - ประเภท</h4>
             </a>
             <p class="card-text mb-4">ราคา</p>
-            <a href="product.php" class="btn btn-primary btn-sm">ดูสินเพิ่มเติม</a>
           </div>
         </div>
       </div>
@@ -160,7 +158,6 @@
               <h4 class="card-title">ชื่อสินค้า - ประเภท</h4>
             </a>
             <p class="card-text mb-4">ราคา</p>
-            <a href="product.php" class="btn btn-primary btn-sm">ดูสินเพิ่มเติม</a>
           </div>
         </div>
       </div>
