@@ -79,13 +79,13 @@ image{
             <div class="page-header flex-wrap">
               <h2 class="mb-0"> ยินดีต้อน! <span class="pl-0 h6 pl-sm-2 text-muted d-inline-block">เข้าสู่เว็บไซต์ของเรา</span>
               </h2>
-              <div class="d-flex">
+              {{-- <div class="d-flex">
 
                   <i></i><a href="login.php" class="button button2 btn-sm ml-1">เข้าสู่ระบบ</button></a>
 
 
                   <i></i><a href="register.php" class="button button2 btn-sm ml-1">สมัครสมาชิก</button></a>
-              </div>
+              </div> --}}
             </div>
             <div class="row">
               <div class="col-xl-3 col-lg-12 stretch-card grid-margin">
@@ -156,8 +156,8 @@ image{
                   <div class="card-body">
                     <div class="row">
                       <div class="col-sm-12 text-md-right">
-                        <button type="button" class="btn btn-icon-text mb-3 mb-sm-0 btn-inverse-primary font-weight-normal">
-                          <i class="mdi mdi-email btn-icon-prepend"></i>Download Report </button>
+                        {{-- <button type="button" class="btn btn-icon-text mb-3 mb-sm-0 btn-inverse-primary font-weight-normal">
+                          <i class="mdi mdi-email btn-icon-prepend"></i>Download Report </button> --}}
                     </div>
 
                       <h5>ความรู้เกี่ยวกับยี่ห้อต่าง ๆ</h5>
@@ -233,15 +233,7 @@ image{
 
 
               <div class="col-xl-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <p1 class="card-title text-black">ดูสินค้าเพิ่มเติม</p1>
-                    <div class="list-wrapper">
-                      <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
 

@@ -210,7 +210,7 @@
               </li>
               <li class="nav-item nav-profile dropdown border-0">
                 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown">
-                  <img class="nav-profile-img mr-2" alt="" src="{{ asset('template/admin/assets/images/faces/face10.jpg') }}" />
+                  <img class="nav-profile-img mr-2" alt="" src="{{ asset('template/admin/assets/images/faces/user.png') }}" />
                   <span class="profile-name">{{ Auth::user()->name }}</span>
                 </a>
                 <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
